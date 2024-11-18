@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>年齢計算</title>
+</head>
+<body>
+    <h1>年齢を計算</h1>
+    <form action="/calculate-age" method="get">
+        <label for="birthYear">生年月日:</label>
+        <input type="date" id="birthYear" name="birthYear" required>
+        <input type="submit" value="送信">
+    </form>
+    <% if (birthYear) { %>
+        <p>生まれた日: <%= birthYear %></p>
+        <p>あなたの年齢: <%= age %> 歳</p>
+    <% } else { %>
+        <p>生年月日を入力してください。</p>
+    <% } %>
+</body>
+</html>
+
